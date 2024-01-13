@@ -91,6 +91,18 @@ startup
 	settings.Add("forgedEmail", false, "Forged Email", "unisplt");
 	settings.Add("necklaceTrap", false, "Necklace Trap", "unisplt");
 	
+	// All Awards Splits
+	settings.Add("allawsplit", true, "Extra 'All Awards' Splits");
+	settings.Add("raid", false, "Raid", "allawsplit");
+	settings.Add("karlCharacter1", false, "Karl Character 1", "allawsplit");
+	settings.Add("karlCharacter2", false, "Karl Character 2", "allawsplit");
+	settings.Add("monsterTutorialStart", false, "Monster Tutorial Start", "allawsplit");
+	settings.Add("karlCharacter3", false, "Karl Character 3", "allawsplit");
+	settings.Add("karlCharacter4", false, "Karl Character 4", "allawsplit");
+	settings.Add("karlCharacter5", false, "Karl Character 5", "allawsplit");
+	settings.Add("cardReady", false, "Card Ready", "allawsplit");
+	settings.Add("awardsScreen", false, "Awards Screen", "allawsplit");
+
 	// Death% 
 	settings.Add("deathp", false, "Death%");
 	settings.Add("mdonedp", false, "Match Done", "deathp");
@@ -180,6 +192,17 @@ start
 		vars.forgedEmail = !settings["forgedEmail"];
 		vars.necklaceTrap = !settings["necklaceTrap"];
 		
+		// All Awards Splits
+		vars.raid = !settings["raid"];
+		vars.karlCharacter1 = !settings["karlCharacter1"];
+		vars.karlCharacter2 = !settings["karlCharacter2"];
+		vars.monsterTutorialStart = !settings["monsterTutorialStart"];
+		vars.karlCharacter3 = !settings["karlCharacter3"];
+		vars.karlCharacter4 = !settings["karlCharacter4"];
+		vars.karlCharacter5 = !settings["karlCharacter5"];
+		vars.cardReady = !settings["cardReady"];
+		vars.awardsScreen = !settings["awardsScreen"];
+		
 		// Death%
 		vars.deathp = !settings["deathp"];
 		vars.mdonedp = !settings["mdonedp"];
@@ -198,7 +221,8 @@ split
 			
 		// Death% End
 		case "SecondChance_Type_SC":
-			return true;
+			if (!vars.deathp) { vars.deathp = true; return true; }
+			break;
 			
 		// Universal Splits
 		case "Cinematic_BucketRaise_SC":
@@ -430,8 +454,35 @@ split
 		case "s5208a_SC":
 			if (!vars.necklaceTrap) { vars.necklaceTrap = true; return true; }
 			break;
-			
 		
+		// All Awards Splits
+		case "RaidScript_SC":
+			if (!vars.raid) { vars.raid = true; return true; }
+			break;
+		case "s1126":
+			if (!vars.karlCharacter1) { vars.karlCharacter1 = true; return true; }
+			break;
+		case "s1115":
+			if (!vars.karlCharacter2) { vars.karlCharacter2 = true; return true; }
+			break;
+		case "MonsterTut_SC":
+			if (!vars.monsterTutorialStart) { vars.monsterTutorialStart = true; return true; }
+			break;
+		case "s1116":
+			if (!vars.karlCharacter3) { vars.karlCharacter3 = true; return true; }
+			break;
+		case "s1117":
+			if (!vars.karlCharacter4) { vars.karlCharacter4 = true; return true; }
+			break;
+		case "s1118":
+			if (!vars.karlCharacter5) { vars.karlCharacter5 = true; return true; }
+			break;
+		case "s1119":
+			if (!vars.cardReady) { vars.cardReady = true; return true; }
+			break;
+		case "MetaAwards_SC":
+			if (!vars.awardsScreen) { vars.awardsScreen = true; return true; }
+			break;
 	}
 }
 
