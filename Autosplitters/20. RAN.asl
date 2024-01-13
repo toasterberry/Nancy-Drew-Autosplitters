@@ -1,4 +1,4 @@
-// Nancy Drew: The Phantom of Venice
+// Nancy Drew: Ransom of the Seven Ships
 // Written by Toasterberry, Scenes by Yandema
 // https://linktr.ee/toasterberry
 
