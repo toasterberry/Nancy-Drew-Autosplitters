@@ -61,7 +61,6 @@ startup
 	settings.Add("brendasCard", false, "Brenda’s Card", "unisplt");
 	settings.Add("dierdreDistracted", false, "Dierdre Distracted", "unisplt");
 	settings.Add("brendaFingerprint", false, "Brenda Fingerprint", "unisplt");
-	settings.Add("acetone", false, "Acetone", "unisplt");
 	settings.Add("scoopClosedNewspaper", false, "Scoop Closed Newspaper", "unisplt");
 	settings.Add("dierdresTicket", false, "Dierdre’s Ticket", "unisplt");
 	settings.Add("toni217", false, "Toni 2:17", "unisplt");
@@ -145,7 +144,6 @@ start
 		vars.brendasCard = !settings["brendasCard"];
 		vars.dierdreDistracted = !settings["dierdreDistracted"];
 		vars.brendaFingerprint = !settings["brendaFingerprint"];
-		vars.acetone = !settings["acetone"];
 		vars.scoopClosedNewspaper = !settings["scoopClosedNewspaper"];
 		vars.dierdresTicket = !settings["dierdresTicket"];
 		vars.toni217 = !settings["toni217"];
@@ -330,11 +328,8 @@ split
 		case "s1064":
 			if (!vars.dierdreDistracted) { vars.dierdreDistracted = true; return true; }
 			break;
-		case "s4156GGGG":
+		case "s4156":
 			if (!vars.brendaFingerprint) { vars.brendaFingerprint = true; return true; }
-			break;
-		case "s4156GGGG":
-			if (!vars.acetone) { vars.acetone = true; return true; }
 			break;
 		case "s2504":
 			if (!vars.scoopClosedNewspaper) { vars.scoopClosedNewspaper = true; return true; }
