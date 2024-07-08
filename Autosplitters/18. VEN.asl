@@ -71,7 +71,7 @@ startup {
         { "s6616", "Drains Done" },
         { "s6709", "Locked in Safe Room" },
         { "s6719", "Escaped from Tunnels" },
-        { "s5490", "Captured Helena" }.
+        { "s5490", "Captured Helena" },
         { "s6500", "End" }
     };
 
