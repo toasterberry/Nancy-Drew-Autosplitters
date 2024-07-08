@@ -93,16 +93,26 @@ startup {
 
     foreach (var entry in death)
         settings.Add(entry.Key, false, entry.Value, "death%");
+
+    vars.completed = new HashSet<string>();
+}
+
+onStart {
+    vars.completed.Clear();
 }
 
 start {
-    return old.scene != current.scene && current.scene == "s6420";
+    return old.scene != current.scene
+        && current.scene == "s6420";
 }
 
 split {
-    return old.scene != current.scene && settings[current.scene];
+    return old.scene != current.scene
+        && settings[current.scene]
+        && vars.completed.Add(current.scene);
 }
 
 reset {
-    return old.scene != current.scene && current.scene == "s6455";
+    return old.scene != current.scene
+        && current.scene == "s6455";
 }
