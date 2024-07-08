@@ -13,13 +13,13 @@ startup {
         { "s2320", "Helena" },
         { "s2333", "Banco Del Oro Card" },
         { "s4121", "Pick up Binoculars" },
-        { "s2949", "Fango�s Door is Locked" },
+        { "s2949", "Fango's Door is Locked" },
         { "s1000", "Margherita" },
         { "s2070", "Spy on Fango" },
         { "s1611", "Answer Prudence Call" },
         { "s3544", "Hairpin" },
         { "s4724", "Found Bug" },
-        { "s2925", "In Fango�s Office" },
+        { "s2925", "In Fango's Office" },
         { "s2943", "Hidden in the Closet" },
         { "s4421", "Correct Pigeon" },
         { "s4419", "Translated Samantha Quick Note" },
@@ -29,7 +29,7 @@ startup {
         { "s4460", "Scopa Explanation Start" },
         { "s1317", "Scopa Start" },
         { "s1314", "Scopa Done" },
-        { "s2930", "Fango�s Computer" },
+        { "s2930", "Fango's Computer" },
         { "s3545", "Attacked by Phantom" },
         { "s2037", "Margherita in Argon Office" },
         { "s5819", "Rialto Market Bottle" },
@@ -85,34 +85,24 @@ startup {
         { "s2074", "End" }
     };
 
-    settings.Add("unisplt", true, "Universal Splits");
-    settings.Add("deathp", false, "Death%");
+    settings.Add("universal", true, "Universal Splits");
+    settings.Add("death%", false, "Death%");
 
     foreach (var entry in universal)
-        settings.Add(entry.Key, false, entry.Value);
+        settings.Add(entry.Key, false, entry.Value, "universal");
 
     foreach (var entry in death)
-        settings.Add(entry.Key, false, entry.Value);
-
-    vars.completed = new HashSet<string>();
-}
-
-onStart {
-    vars.completed.Clear();
+        settings.Add(entry.Key, false, entry.Value, "death%");
 }
 
 start {
-    return old.scene != current.scene
-        && current.scene == "s6420";
+    return old.scene != current.scene && current.scene == "s6420";
 }
 
 split {
-    return old.scene != current.scene
-        && settings[current.scene]
-        && vars.completed.Add(current.scene);
+    return old.scene != current.scene && settings[current.scene];
 }
 
 reset {
-    return old.scene != current.scene
-        && current.scene == "s6455";
+    return old.scene != current.scene && current.scene == "s6455";
 }
