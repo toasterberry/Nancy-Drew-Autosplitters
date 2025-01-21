@@ -24,7 +24,7 @@ startup {
     settings.Add("XD_MEET_SC",false,"Meet Xenia", "unisplt");
     settings.Add("GK_FLY_SC",false,"Meet Grigor", "unisplt");
     settings.Add("WIN_SCENERYCRASHANIM_SC",false,"Break Fly System", "unisplt");
-    settings.Add("S1090",false,"Xenia’s Script", "unisplt");
+    settings.Add("S1090",false,"Xeniaâ€™s Script", "unisplt");
     settings.Add("GK_FLYFIX_SC",false,"Grigor Says to Fix Fly System", "unisplt");
     settings.Add("WIN_STORIESCU_SC",false,"Got Tartarus Book", "unisplt");
     settings.Add("WIN_KEYPAD_SC",false,"Backstage Keypad", "unisplt");
@@ -33,7 +33,7 @@ startup {
     settings.Add("LEVERSWON_SC",false,"Fly System Done", "unisplt");
     settings.Add("WIN_LIFTDOWNANIM_SC",false,"Into the Underworld", "unisplt");
     settings.Add("TG_APPEAR_SC",false,"Meet Thanos", "unisplt");
-    settings.Add("S1894",false,"Charon’s Hand", "unisplt");
+    settings.Add("S1894",false,"Charonâ€™s Hand", "unisplt");
     settings.Add("STY_LIFTUP_SC",false,"Back to Overworld", "unisplt");
     settings.Add("MUS_NIOBECASE_ANIM_SC",false,"Enter Museum", "unisplt");
     settings.Add("S1416",false,"Welcome Note", "unisplt");
@@ -43,7 +43,7 @@ startup {
     settings.Add("ANIMALS_SC",false,"Animals Start", "unisplt");
     settings.Add("ANIMALSWON_SC",false,"Animals Done", "unisplt");
     settings.Add("S1426",false,"Coin Display", "unisplt");
-    settings.Add("S2492_OPEN_SC",false,"Grigor’s Bag", "unisplt");
+    settings.Add("S2492_OPEN_SC",false,"Grigorâ€™s Bag", "unisplt");
     settings.Add("S1895",false,"See Rubbing", "unisplt");
     settings.Add("STY_FERRYANIM_SC",false,"Paid Ferryman", "unisplt");
     settings.Add("DOG1_SC",false,"Cerberus 1", "unisplt");
@@ -123,7 +123,7 @@ startup {
     settings.Add("BRIDGE_SC",false,"Raise the Bridge Start", "unisplt");
     settings.Add("BRIDGEWON_SC",false,"Raise the Bridge Done", "unisplt");
     settings.Add("S1229",false,"Seeds Got", "unisplt");
-    settings.Add("S1221",false,"Grigor’s Letter", "unisplt");
+    settings.Add("S1221",false,"Grigorâ€™s Letter", "unisplt");
     settings.Add("SEEDS_SC",false,"Seeds Start", "unisplt");
     settings.Add("SEEDSWON_SC",false,"Seeds Done", "unisplt");
     settings.Add("WIFI_SC",false,"Wifi Puzzle Start", "unisplt");
