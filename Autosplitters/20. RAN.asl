@@ -107,7 +107,7 @@ onStart {
 
 start {
 	if (current.scene == "s6459") {
-		vars.deathp = !settings["deathp"];
+		vars.death = !settings["death"];
 		vars.reset = !settings["reset"];
 		vars.award = !settings["award"];
 		return true;
