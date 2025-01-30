@@ -23,7 +23,7 @@ startup {
 		{ "s3250", "Golf Cart Start" },
 		{ "s3255", "Golf Cart Done" },
 		{ "s5150", "Shark Cove Start" },
-		{ "s5105", "Journal Found" },
+		{ "s5015", "Journal Found" },
 		{ "s2323", "See Missing Pulley" },
 		{ "s4718", "Caught in Snare Trap" },
 		{ "s1135", "Ask for Battery" },
@@ -33,7 +33,7 @@ startup {
 		{ "s4399", "Land Rush Start" },
 		{ "s4108", "Land Rush Done" },
 		{ "s4398", "Coconuts Start" },
-		{ "5400", "Sailing Start" },
+		{ "s5400", "Sailing Start" },
 		{ "s2610", "At Diving Spot" },
 		{ "s2631", "Urchin" },
 		{ "s2650", "Underwater Sudoku Start" },
@@ -109,6 +109,7 @@ start {
 	if (current.scene == "s6459") {
 		vars.deathp = !settings["deathp"];
 		vars.reset = !settings["reset"];
+		vars.award = !settings["award"];
 		return true;
 	}
 }
@@ -119,7 +120,7 @@ split {
 
 	return current.scene == "s6498" && !vars.death // Death% end
 		|| current.scene == "s6400" && !vars.award // All Awards end
-		|| current.scene == "s6494" // Universal end
+		|| current.scene == "s6494" && vars.award // Universal end
 		|| settings[current.scene] && vars.completedSplits.Add(current.scene); // All other splits
 }
 
