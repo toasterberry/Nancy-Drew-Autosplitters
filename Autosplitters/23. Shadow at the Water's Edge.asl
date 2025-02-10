@@ -43,7 +43,6 @@ startup
 	settings.Add("bigScr",false,"Big Jumpscare");
 	settings.Add("takaeWillConv",false,"Will Convo with Takae");
 	settings.Add("rentCnfrnt",false,"Confront Rentaro");
-	settings.Add("theEnd",false,"The End");
 	
 }
 
@@ -84,7 +83,6 @@ start
 		vars.bigScr = !settings["bigScr"];
 		vars.takaeWillConv = !settings["takaeWillConv"];
 		vars.rentCnfrnt = !settings["rentCnfrnt"];
-		vars.theEnd = !settings["theEnd"];
 		return true;
 	}
 }
